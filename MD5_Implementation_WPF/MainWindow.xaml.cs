@@ -58,8 +58,11 @@ namespace MD5_Implementation_WPF
         {
             if (!string.IsNullOrEmpty(tbxPlaintext.Text))
             {
-                GenerateTemplate(tbxPlaintext.Text);
+                ListContent.Clear();
+                lbxContent.ItemsSource = null;
                 lbxContent.Items.Clear();
+
+                GenerateTemplate(tbxPlaintext.Text);
                 lbxContent.ItemsSource = ListContent;
             }
         }
